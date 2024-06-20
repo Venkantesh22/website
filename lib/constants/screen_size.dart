@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 const double deskTopScreen = 920.0;
 
 const double mobile = 550;
-// const double tablets = 550 - 900
 
 class Dimensions {
   static late double screenHeight;

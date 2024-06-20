@@ -11,7 +11,7 @@ import 'package:samayweb/widgets/drawer_mobile.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:samayweb/widgets/mainSection_desktop.dart';
 import 'package:samayweb/widgets/mainSection_mobile.dart';
-import 'package:samayweb/widgets/mainSection_tablst.dart';
+import 'package:samayweb/widgets/mainSection_tablet.dart';
 
 class Homepages extends StatefulWidget {
   const Homepages({Key? key}) : super(key: key);
