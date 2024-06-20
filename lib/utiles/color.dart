@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class AppColors {
   // Background Color
   static const Color appbarColor = Color(0xFF0C421F);
-  static const Color mainSectionColor = Color(0xFFD6E6C2);
+  static const Color mainSectionColor = Color(0xFFCCFF8D);
   static const Color streamLineSectionColor = Color(0xFFD9D9D9);
 
   // Button  Color

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:samayweb/constants/screen_size.dart';
 import 'package:samayweb/pages/Home_page.dart';
 
 void main() {
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Samay Introduction Website',
-      home: const Homepages(),
+      home: Builder(builder: (context) {
+        Dimensions.init(context);
+        return const Homepages();
+      }),
     );
   }
 }
