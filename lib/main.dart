@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:samayweb/constants/screen_size.dart';
+import 'package:samayweb/constants/dimenison.dart';
 import 'package:samayweb/pages/Home_page.dart';
 
 void main() {

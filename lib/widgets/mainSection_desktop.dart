@@ -9,10 +9,8 @@ class MainSectionDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenHight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
     return Container(
-      height: 400,
+      height: 375,
       color: AppColors.mainSectionColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,7 +51,7 @@ class MainSectionDesktop extends StatelessWidget {
           SizedBox(
             width: 321,
             // width: 165,
-            height: 500,
+            height: 400,
             child: Image.asset(
               AppImages.cartoon,
               fit: BoxFit.cover,
