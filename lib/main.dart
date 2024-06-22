@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:samayweb/constants/dimenison.dart';
-import 'package:samayweb/pages/Home_page.dart';
+import 'package:samayweb/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());

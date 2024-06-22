@@ -20,7 +20,7 @@ class ImagesServices extends StatelessWidget {
           // width: 250,
           // height: 266,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(Dimensions.dimenisonNo10),
             // color: Colors.red,
           ),
           child: Image.network(
