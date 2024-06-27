@@ -30,7 +30,7 @@ class BookingSection extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: Dimensions.dimenisonNo40,
+            height: Dimensions.dimenisonNo50,
           ),
           ConstrainedBox(
             constraints: BoxConstraints(maxWidth: Dimensions.dimenisonNo900),

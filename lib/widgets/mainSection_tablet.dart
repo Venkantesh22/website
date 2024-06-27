@@ -10,6 +10,7 @@ class MainSectionsTablets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       height: 400,
       color: AppColors.mainSectionColor,
       child: Stack(

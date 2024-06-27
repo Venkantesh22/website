@@ -8,8 +8,10 @@ class AppbarDeskTop extends StatelessWidget {
   const AppbarDeskTop({
     Key? key,
     this.onLogoTap,
+    required this.onNavMenuTap,
   }) : super(key: key);
   final VoidCallback? onLogoTap;
+  final Function(int) onNavMenuTap;
 
   @override
   Widget build(BuildContext context) {
@@ -30,18 +32,38 @@ class AppbarDeskTop extends StatelessWidget {
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(
+          Padding(
+            padding: const EdgeInsets.symmetric(
               vertical: 10.0,
               horizontal: 20.0,
             ),
             child: Row(
               children: [
-                NavBarText(text: "Home"),
-                NavBarText(text: "Features"),
-                NavBarText(text: "Contact Us "),
-                NavBarText(text: "About Us "),
-                AppBarButton(),
+                NavBarText(
+                  text: "Home",
+                  ontap: () {
+                    onNavMenuTap(0);
+                  },
+                ),
+                NavBarText(
+                  text: "Download",
+                  ontap: () {
+                    onNavMenuTap(1);
+                  },
+                ),
+                NavBarText(
+                  text: "Contact Us ",
+                  ontap: () {
+                    onNavMenuTap(2);
+                  },
+                ),
+                NavBarText(
+                  text: "About Us ",
+                  ontap: () {
+                    onNavMenuTap(3);
+                  },
+                ),
+                AppBarButton(text: "Book Demo", onTap: () {}),
               ],
             ),
           ),
