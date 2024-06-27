@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:samayweb/constants/dimenison.dart';
 import 'package:samayweb/constants/download_button.dart';
 import 'package:samayweb/constants/step_download_desktop.dart';
-import 'package:samayweb/constants/step_row.dart';
 import 'package:samayweb/utiles/images.dart';
 import 'package:samayweb/utiles/color.dart';
 
