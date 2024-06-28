@@ -1,6 +1,10 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:samayweb/constants/dimenison.dart';
-import 'package:samayweb/utiles/sns_links.dart';
+import 'package:samayweb/constants/router.dart';
+import 'package:samayweb/pages/about.dart';
+import 'package:samayweb/utiles/page_state.dart';
 import 'package:samayweb/widgets/appBar_desktop.dart';
 import 'package:samayweb/widgets/appbar_mobile.dart';
 import 'package:samayweb/widgets/bookingSection.dart';
@@ -28,6 +32,12 @@ class Homepages extends StatefulWidget {
 class _HomepagesState extends State<Homepages> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final scrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    PageStats.currentPage = "HomePage";
+  }
 
   final List<GlobalKey> navbarKeys = List.generate(3, (index) => GlobalKey());
 
@@ -81,6 +91,7 @@ class _HomepagesState extends State<Homepages> {
               const SizedBox(
                 height: 35,
               ),
+
               //Booking Servies
               SizedBox(
                 height: Dimensions.dimenisonNo10,
@@ -131,8 +142,11 @@ class _HomepagesState extends State<Homepages> {
 
   void scrollToSection(int navIndex) {
     if (navIndex == 3) {
-      // open a blog page
-      js.context.callMethod('open', [SnsLinks.linkedin]);
+      // open a About us page
+      setState(() {
+        PageStats.currentPage = "about us";
+      });
+      Routes.instance.push(widget: const AboutUspage(), context: context);
 
       return;
     }

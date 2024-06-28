@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:samayweb/constants/router.dart';
+import 'package:samayweb/pages/about.dart';
+import 'package:samayweb/pages/home_page.dart';
+import 'package:samayweb/pages/coming_soon.dart';
 import 'package:samayweb/utiles/images.dart';
 import 'package:samayweb/constants/navBarText.dart';
 import 'package:samayweb/pages/widget/appBarButton.dart';
 import 'package:samayweb/utiles/color.dart';
+import 'package:samayweb/utiles/page_state.dart';
 
 class AppbarDeskTop extends StatelessWidget {
   const AppbarDeskTop({
@@ -37,35 +42,85 @@ class AppbarDeskTop extends StatelessWidget {
               vertical: 10.0,
               horizontal: 20.0,
             ),
-            child: Row(
-              children: [
-                NavBarText(
-                  text: "Home",
-                  ontap: () {
-                    onNavMenuTap(0);
-                  },
-                ),
-                NavBarText(
-                  text: "Download",
-                  ontap: () {
-                    onNavMenuTap(1);
-                  },
-                ),
-                NavBarText(
-                  text: "Contact Us ",
-                  ontap: () {
-                    onNavMenuTap(2);
-                  },
-                ),
-                NavBarText(
-                  text: "About Us ",
-                  ontap: () {
-                    onNavMenuTap(3);
-                  },
-                ),
-                AppBarButton(text: "Book Demo", onTap: () {}),
-              ],
-            ),
+            child: PageStats.currentPage == "HomePage"
+                ? Row(
+                    children: [
+                      NavBarText(
+                        text: "Home",
+                        ontap: () {
+                          onNavMenuTap(0);
+                        },
+                      ),
+                      NavBarText(
+                        text: "Download",
+                        ontap: () {
+                          onNavMenuTap(1);
+                        },
+                      ),
+                      NavBarText(
+                        text: "Contact Us ",
+                        ontap: () {
+                          onNavMenuTap(2);
+                        },
+                      ),
+                      NavBarText(
+                        text: "About Us ",
+                        ontap: () {
+                          onNavMenuTap(3);
+                        },
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Routes.instance.push(
+                              widget: const ComingSoon(), context: context);
+                        },
+                        child: AppBarButton(
+                            text: "Book Demo",
+                            onTap: () {
+                              Routes.instance.push(
+                                  widget: const ComingSoon(), context: context);
+                            }),
+                      ),
+                    ],
+                  )
+                : Row(
+                    children: [
+                      NavBarText(
+                        text: "Home",
+                        ontap: () {
+                          Routes.instance.push(
+                              widget: const Homepages(), context: context);
+                        },
+                      ),
+                      NavBarText(
+                        text: "Download",
+                        ontap: () {
+                          Routes.instance.push(
+                              widget: const Homepages(), context: context);
+                        },
+                      ),
+                      NavBarText(
+                        text: "Contact Us ",
+                        ontap: () {
+                          Routes.instance.push(
+                              widget: const Homepages(), context: context);
+                        },
+                      ),
+                      NavBarText(
+                        text: "About Us ",
+                        ontap: () {
+                          Routes.instance.push(
+                              widget: const AboutUspage(), context: context);
+                        },
+                      ),
+                      AppBarButton(
+                          text: "Book Demo",
+                          onTap: () {
+                            Routes.instance.push(
+                                widget: const ComingSoon(), context: context);
+                          }),
+                    ],
+                  ),
           ),
         ],
       ),

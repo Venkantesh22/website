@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:samayweb/constants/dimenison.dart';
 import 'package:samayweb/utiles/images.dart';
+import 'package:samayweb/utiles/sns_links.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'dart:js' as js;
 
 class FoolerSection extends StatelessWidget {
   const FoolerSection({Key? key}) : super(key: key);
@@ -31,10 +35,58 @@ class FoolerSection extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              footerIcons(AppImages.instargamIcon, () {}),
-              footerIcons(AppImages.facebookIcon, () {}),
-              footerIcons(AppImages.linkedIcon, () {}),
-              footerIcons(AppImages.xIcon, () {}),
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: Dimensions.dimenisonNo10),
+                child: IconButton(
+                  icon: const FaIcon(
+                    FontAwesomeIcons.instagram,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    js.context.callMethod('open', [SnsLinks.instagram]);
+                  },
+                ),
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: Dimensions.dimenisonNo10),
+                child: IconButton(
+                  icon: const FaIcon(
+                    FontAwesomeIcons.facebook,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    js.context.callMethod('open', [SnsLinks.facebook]);
+                  },
+                ),
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: Dimensions.dimenisonNo10),
+                child: IconButton(
+                  icon: const FaIcon(
+                    FontAwesomeIcons.linkedinIn,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    js.context.callMethod('open', [SnsLinks.linkedin]);
+                  },
+                ),
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: Dimensions.dimenisonNo10),
+                child: IconButton(
+                  icon: const FaIcon(
+                    FontAwesomeIcons.x,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    js.context.callMethod('open', [SnsLinks.x]);
+                  },
+                ),
+              ),
             ],
           ),
           SizedBox(

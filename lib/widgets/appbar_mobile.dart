@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:samayweb/utiles/images.dart';
 import 'package:samayweb/utiles/color.dart';
+import 'package:samayweb/utiles/page_state.dart';
 
 class AppbarMobile extends StatelessWidget {
   const AppbarMobile({Key? key, this.onLogoTap, this.onMenuTap})
@@ -31,10 +32,15 @@ class AppbarMobile extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(40, 5, 20, 5),
             child: IconButton(
                 onPressed: onMenuTap,
-                icon: const Icon(
-                  Icons.menu,
-                  color: Colors.white,
-                )),
+                icon: PageStats.currentPage == "HomePage"
+                    ? Icon(
+                        Icons.menu,
+                        color: Colors.white,
+                      )
+                    : Icon(
+                        Icons.home,
+                        color: Colors.white,
+                      )),
           )
         ],
       ),

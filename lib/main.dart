@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Samay Introduction Website',
       home: Builder(builder: (context) {
         Dimensions.init(context);
+
         return const Homepages();
       }),
     );
