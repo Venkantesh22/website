@@ -10,12 +10,12 @@ class MainSectionMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 360,
+      height: Dimensions.dimenisonNo400,
       color: AppColors.mainSectionColor,
       child: Stack(
         children: [
           Positioned(
-            right: Dimensions.dimenisonNo25,
+            right: Dimensions.dimenisonNo20,
             width: Dimensions.dimenisonNo250,
             height: Dimensions.dimenisonNo250,
             child: Image.asset(
@@ -25,7 +25,7 @@ class MainSectionMobile extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.center,
-            margin: const EdgeInsets.only(top: 180),
+            margin: EdgeInsets.only(top: Dimensions.dimenisonNo230),
             height: 95,
             child: Text(
               'SAMAY\nONE-SOLUTION\n',
@@ -38,7 +38,8 @@ class MainSectionMobile extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(top: 250, left: 30),
+            margin: EdgeInsets.only(
+                top: Dimensions.dimenisonNo300, left: Dimensions.dimenisonNo30),
             width: 319,
             height: 300,
             child: Text.rich(

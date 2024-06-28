@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:samayweb/constants/dimenison.dart';
 import 'package:samayweb/constants/drawer_text.dart';
 import 'package:samayweb/constants/router.dart';
-import 'package:samayweb/pages/about.dart';
-import 'package:samayweb/pages/home_page.dart';
 import 'package:samayweb/pages/widget/appBarButton.dart';
 import 'package:samayweb/pages/coming_soon.dart';
 import 'package:samayweb/utiles/color.dart';
-import 'package:samayweb/utiles/page_state.dart';
 
 class DrawerMoblie extends StatelessWidget {
   const DrawerMoblie({Key? key, required this.onNavItemTap}) : super(key: key);

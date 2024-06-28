@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:samayweb/constants/dimenison.dart';
 import 'package:samayweb/constants/download_button.dart';
+import 'package:samayweb/constants/router.dart';
 import 'package:samayweb/constants/step_row.dart';
+import 'package:samayweb/pages/coming_soon.dart';
 import 'package:samayweb/utiles/color.dart';
 import 'package:samayweb/utiles/images.dart';
 
@@ -47,13 +49,19 @@ class DownloadSecMoblie extends StatelessWidget {
                 DownloadButtonMobile(
                   platform: "Google Store",
                   // icon: Icons.android_sharp,
-                  onTap: () {},
+                  onTap: () {
+                    Routes.instance
+                        .push(widget: const ComingSoon(), context: context);
+                  },
                   imgUrl: AppImages.androidicon,
                 ),
                 DownloadButtonMobile(
                     platform: "Apply Store",
                     icon: Icons.apple_sharp,
-                    onTap: () {}),
+                    onTap: () {
+                      Routes.instance
+                          .push(widget: const ComingSoon(), context: context);
+                    }),
               ],
             ),
           ),

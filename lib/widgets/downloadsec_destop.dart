@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:samayweb/constants/dimenison.dart';
 import 'package:samayweb/constants/download_button.dart';
+import 'package:samayweb/constants/router.dart';
 import 'package:samayweb/constants/step_download_desktop.dart';
+import 'package:samayweb/pages/coming_soon.dart';
 import 'package:samayweb/utiles/images.dart';
 import 'package:samayweb/utiles/color.dart';
 
@@ -41,14 +43,20 @@ class DownloadSectionDesktop extends StatelessWidget {
                       platform: "Google Store",
                       // icon: Icons.android_sharp,
                       imgUrl: AppImages.androidicon,
-                      onTap: () {}),
+                      onTap: () {
+                        Routes.instance
+                            .push(widget: const ComingSoon(), context: context);
+                      }),
                   SizedBox(
                     height: Dimensions.dimenisonNo20,
                   ),
                   DownloadButton(
                       platform: "Apply Store",
                       icon: Icons.apple_sharp,
-                      onTap: () {}),
+                      onTap: () {
+                        Routes.instance
+                            .push(widget: const ComingSoon(), context: context);
+                      }),
                 ],
               ),
               // Android screen

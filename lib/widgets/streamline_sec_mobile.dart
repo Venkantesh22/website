@@ -2,6 +2,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:samayweb/constants/dimenison.dart';
+import 'package:samayweb/constants/router.dart';
+import 'package:samayweb/pages/coming_soon.dart';
 import 'package:samayweb/utiles/color.dart';
 
 class StreamlineSecMobile extends StatelessWidget {
@@ -68,8 +70,14 @@ class StreamlineSecMobile extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: Dimensions.dimenisonNo5,
+          ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Routes.instance
+                  .push(widget: const ComingSoon(), context: context);
+            },
             child: Container(
               width: Dimensions.screenWidth / 1.3,
               height: Dimensions.dimenisonNo60,

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "samay-web-info",
+    "site": "samay-info",
     "public": "build/web",
     "ignore": [
       "firebase.json",

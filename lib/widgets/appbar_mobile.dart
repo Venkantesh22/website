@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:samayweb/utiles/images.dart';
 import 'package:samayweb/utiles/color.dart';
-import 'package:samayweb/utiles/page_state.dart';
 
 class AppbarMobile extends StatelessWidget {
   const AppbarMobile({Key? key, this.onLogoTap, this.onMenuTap})

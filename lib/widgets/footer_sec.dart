@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:samayweb/constants/dimenison.dart';
-import 'package:samayweb/utiles/images.dart';
 import 'package:samayweb/utiles/sns_links.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
