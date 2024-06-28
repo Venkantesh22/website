@@ -1,3 +1,3 @@
-class PageStats {
-  static String? currentPage;
-}
+// class PageStats {
+//   static String currentPage = "HomePage";
+// }

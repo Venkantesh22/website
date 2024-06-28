@@ -61,7 +61,7 @@ class StepRow extends StatelessWidget {
                 fontSize: Dimensions.dimenisonNo16,
                 fontFamily: GoogleFonts.robotoSlab().fontFamily,
                 fontWeight: FontWeight.w500,
-                height: 0,
+                height: 1.3,
               ),
               softWrap: true,
               maxLines: 4,

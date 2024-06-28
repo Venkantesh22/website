@@ -25,7 +25,7 @@ class FoolerSection extends StatelessWidget {
               fontSize: Dimensions.dimenisonNo16,
               fontFamily: GoogleFonts.robotoSlab().fontFamily,
               fontWeight: FontWeight.w700,
-              height: 0,
+              height: 1.5,
               letterSpacing: 1.00,
             ),
           ),

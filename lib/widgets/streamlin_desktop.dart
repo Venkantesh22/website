@@ -62,6 +62,9 @@ class StrealineSecDesktop extends StatelessWidget {
                   height: 0,
                 ),
               ),
+              SizedBox(
+                height: Dimensions.dimenisonNo20,
+              ),
               InkWell(
                 onTap: () {},
                 child: Container(

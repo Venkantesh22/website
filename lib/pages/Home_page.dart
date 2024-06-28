@@ -33,11 +33,11 @@ class _HomepagesState extends State<Homepages> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final scrollController = ScrollController();
 
-  @override
-  void initState() {
-    super.initState();
-    PageStats.currentPage = "HomePage";
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   PageStats.currentPage = "HomePage";
+  // }
 
   final List<GlobalKey> navbarKeys = List.generate(3, (index) => GlobalKey());
 
@@ -119,18 +119,24 @@ class _HomepagesState extends State<Homepages> {
               // business Tool title
 
               const BusinessToolsSection(),
-              const LaptopImageSection(),
+              if (constraints.maxWidth > deskTopScreen)
+                const LaptopImageSection()
+              else
+                const LaptopImageSectionMobile(),
+
               // Live Appioment statisic
               SizedBox(
                 height: Dimensions.dimenisonNo10,
               ),
               // Form
-              FormSection(
-                key: navbarKeys[2],
-              ),
+              // FormSection(
+
+              // ),
 
               // Foot
-              const FoolerSection()
+              FoolerSection(
+                key: navbarKeys[2],
+              )
             ],
           ),
         ),
@@ -143,9 +149,7 @@ class _HomepagesState extends State<Homepages> {
   void scrollToSection(int navIndex) {
     if (navIndex == 3) {
       // open a About us page
-      setState(() {
-        PageStats.currentPage = "about us";
-      });
+
       Routes.instance.push(widget: const AboutUspage(), context: context);
 
       return;

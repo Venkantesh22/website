@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:samayweb/constants/dimenison.dart';
 import 'package:samayweb/utiles/images.dart';
 import 'package:samayweb/utiles/color.dart';
 
@@ -9,14 +10,14 @@ class MainSectionMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: 360,
       color: AppColors.mainSectionColor,
       child: Stack(
         children: [
           Positioned(
-            right: 25,
-            width: 182,
-            height: 162,
+            right: Dimensions.dimenisonNo25,
+            width: Dimensions.dimenisonNo250,
+            height: Dimensions.dimenisonNo250,
             child: Image.asset(
               AppImages.cartoon,
               fit: BoxFit.fill,
@@ -24,7 +25,7 @@ class MainSectionMobile extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.center,
-            margin: const EdgeInsets.only(top: 95),
+            margin: const EdgeInsets.only(top: 180),
             height: 95,
             child: Text(
               'SAMAY\nONE-SOLUTION\n',
@@ -37,7 +38,7 @@ class MainSectionMobile extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(top: 170, left: 30),
+            margin: const EdgeInsets.only(top: 250, left: 30),
             width: 319,
             height: 300,
             child: Text.rich(
@@ -50,7 +51,7 @@ class MainSectionMobile extends StatelessWidget {
                       fontSize: 30,
                       fontFamily: GoogleFonts.poppins().fontFamily,
                       fontWeight: FontWeight.w700,
-                      height: 0,
+                      height: 1.3,
                     ),
                   ),
                   TextSpan(
@@ -61,6 +62,7 @@ class MainSectionMobile extends StatelessWidget {
                       fontSize: 20,
                       fontFamily: GoogleFonts.poppins().fontFamily,
                       fontWeight: FontWeight.w700,
+                      height: 1.3,
                     ),
                   ),
                 ],

@@ -5,6 +5,7 @@ import 'package:samayweb/constants/dimenison.dart';
 import 'package:samayweb/constants/router.dart';
 import 'package:samayweb/pages/home_page.dart';
 import 'package:samayweb/style/text_sty_about.dart';
+import 'package:samayweb/utiles/page_state.dart';
 import 'package:samayweb/widgets/appBar_desktop.dart';
 import 'package:samayweb/widgets/appbar_mobile.dart';
 import 'package:samayweb/widgets/drawer_mobile.dart';
@@ -37,12 +38,12 @@ class _AboutUspageState extends State<AboutUspage> {
             children: [
               // Appbar
               if (constraints.maxWidth >= deskTopScreen)
-                AppbarDeskTop(
+                AppbarDeskTopNotHome(
                   onLogoTap: () {},
                   onNavMenuTap: (int navIndex) {},
                 )
               else
-                AppbarMobile(
+                AppbarMobileNotHome(
                   onLogoTap: () {
                     Routes.instance
                         .push(widget: const AboutUspage(), context: context);
@@ -53,10 +54,12 @@ class _AboutUspageState extends State<AboutUspage> {
                         .push(widget: const Homepages(), context: context);
                   },
                 ),
+
               // Title
               SizedBox(
                 height: Dimensions.dimenisonNo60,
               ),
+
               Text(
                 'About Us',
                 textAlign: TextAlign.center,
